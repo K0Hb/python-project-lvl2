@@ -12,6 +12,7 @@ def cli_parser():
                         help='set format of output (default: stylish)')
     return parser.parse_args()
 
+
 def parse_file(file_path):
     formats = {
         '.json': json.loads,
@@ -21,4 +22,3 @@ def parse_file(file_path):
     file_format = os.path.splitext(file_path)[1]
     with open(os.path.abspath(file_path)) as f:
         return formats[file_format](f.read())
-
