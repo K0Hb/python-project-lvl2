@@ -1,97 +1,110 @@
 {
-  "group2": [
-    "removed",
-    {
-      "abc": 12345,
-      "deep": {
-        "id": 45
-      }
-    }
-  ],
-  "group3": [
-    "added",
-    {
-      "deep": {
-        "id": {
-          "number": 45
-        }
-      },
-      "fee": 100500
-    }
-  ],
-  "common": [
+  "cats": [
     "nested",
     {
-      "setting2": [
+      "cat_9": [
         "removed",
-        200
-      ],
-      "follow": [
-        "added",
-        false
-      ],
-      "setting4": [
-        "added",
-        "blah blah"
-      ],
-      "setting5": [
-        "added",
         {
-          "key5": "value5"
+          "big_cat": "bomba"
         }
       ],
-      "setting1": [
+      "cat_2": [
         "unchanged",
-        "Value 1"
-      ],
-      "setting3": [
-        "changed",
-        true,
         null
       ],
-      "setting6": [
+      "cat_3": [
+        "changed",
+        null,
+        "murka"
+      ],
+      "cat_4": [
+        "changed",
+        null,
+        {
+          "mini_cat": "sharik"
+        }
+      ],
+      "cat": [
+        "changed",
+        true,
+        "leshka"
+      ],
+      "cat_1": [
+        "unchanged",
+        "vaska"
+      ],
+      "dogs": [
         "nested",
         {
-          "ops": [
-            "added",
-            "vops"
-          ],
-          "doge": [
+          "big_dogs": [
             "nested",
             {
-              "wow": [
-                "changed",
-                "",
-                "so much"
+              "big_dog": [
+                "unchanged",
+                "volkodav"
               ]
             }
           ],
-          "key": [
+          "dog_1": [
             "unchanged",
-            "value"
+            "volk"
+          ],
+          "dog_2": [
+            "unchanged",
+            "bobik"
           ]
         }
       ]
     }
   ],
-  "group1": [
+  "horses": [
     "nested",
     {
-      "baz": [
+      "horse_1.5": [
+        "removed",
+        "edinorog"
+      ],
+      "horse_2": [
         "changed",
-        "bas",
+        null,
         "bars"
       ],
-      "foo": [
+      "horse3": [
         "unchanged",
-        "bar"
+        "iskander"
       ],
-      "nest": [
-        "changed",
+      "horse_1": [
+        "unchanged",
+        "strela"
+      ]
+    }
+  ],
+  "pigs": [
+    "nested",
+    {
+      "pig_big": [
+        "nested",
         {
-          "key": "value"
-        },
-        "str"
+          "size": [
+            "nested",
+            {
+              "mg": [
+                "removed",
+                90021
+              ],
+              "kg": [
+                "changed",
+                null,
+                80
+              ]
+            }
+          ]
+        }
+      ],
+      "random": [
+        "changed",
+        0,
+        100500
       ]
     }
   ]

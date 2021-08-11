@@ -1,31 +1,31 @@
 {
-    "common": {
-      "follow": false,
-      "setting1": "Value 1",
-      "setting3": null,
-      "setting4": "blah blah",
-      "setting5": {
-        "key5": "value5"
-      },
-      "setting6": {
-        "key": "value",
-        "ops": "vops",
-        "doge": {
-          "wow": "so much"
-        }
+  "cats": {
+    "cat": "leshka",
+    "cat_1": "vaska",
+    "cat_2": null,
+    "cat_3": "murka",
+    "cat_4": {
+      "mini_cat": "sharik"
+    },
+    "dogs": {
+      "dog_1": "volk",
+      "dog_2": "bobik",
+      "big_dogs": {
+        "big_dog": "volkodav"
+      }
+    }
+  },
+  "horses": {
+    "horse_1": "strela",
+    "horse_2": "bars",
+    "horse3": "iskander"
+  },
+  "pigs": {
+    "pig_big": {
+      "size": {
+        "kg": 80
       }
     },
-    "group1": {
-      "foo": "bar",
-      "baz": "bars",
-      "nest": "str"
-    },
-    "group3": {
-      "deep": {
-        "id": {
-          "number": 45
-        }
-      },
-      "fee": 100500
-    }
+    "random": 100500
   }
+}

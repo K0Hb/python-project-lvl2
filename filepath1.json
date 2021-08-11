@@ -1,6 +1,29 @@
 {
-    "host": "hexlet.io",
-    "timeout": 50,
-    "proxy": "123.234.53.22",
-    "follow": false
+  "cats": {
+    "cat": true,
+    "cat_1": "vaska",
+    "cat_9": {
+      "big_cat": "bomba"
+    },
+    "dogs": {
+      "dog_1": "volk",
+      "dog_2": "bobik",
+      "big_dogs": {
+        "big_dog": "volkodav"
+      }
+    }
+  },
+  "horses": {
+    "horse_1": "strela",
+    "horse_1.5": "edinorog",
+    "horse3": "iskander"
+  },
+  "pigs": {
+    "pig_big": {
+      "size": {
+        "mg": 90021
+      }
+    },
+    "random": 0
   }
+}

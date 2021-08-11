@@ -4,10 +4,6 @@ from gendiff.gendiff_base import generate_diff , build_diff
 from gendiff.parser import parse_file
 
 
-def test_gendiff():
-    pass
-
-
 def locate(file):
     return os.path.join('tests', 'fixtures', file)
 
