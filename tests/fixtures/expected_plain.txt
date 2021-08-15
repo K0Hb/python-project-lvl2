@@ -1,10 +1,11 @@
-Property 'cats.cat' was updated. From true to 'leshka'
-Property 'cats.cat_3' was updated. From null to 'murka'
-Property 'cats.cat_4' was updated. From null to [complex value]
-Property 'cats.cat_9' was removed
-
-Property 'horses.horse_1.5' was removed
-Property 'horses.horse_2' was updated. From null to 'bars'
-Property 'pigs.pig_big.size.kg' was updated. From null to 80
-Property 'pigs.pig_big.size.mg' was removed
-Property 'pigs.random' was updated. From 0 to 100500
+Property 'common.follow' was updated. From null to false
+Property 'common.setting2' was removed
+Property 'common.setting3' was updated. From true to null
+Property 'common.setting4' was updated. From null to 'blah blah'
+Property 'common.setting5' was updated. From null to [complex value]
+Property 'common.setting6.doge.wow' was updated. From '' to 'so much'
+Property 'common.setting6.ops' was updated. From null to 'vops'
+Property 'group1.baz' was updated. From 'bas' to 'bars'
+Property 'group1.nest' was updated. From [complex value] to 'str'
+Property 'group2' was removed
+Property 'group3' was updated. From null to [complex value]
