@@ -9,8 +9,8 @@ def locate(file):
 
 def diff_result(output_format):
     return generate_diff(
-        locate('file_before.json'),
-        locate('file_after.json'),
+        locate('file_1.json'),
+        locate('file_2.json'),
         output_format
     )
 
@@ -29,8 +29,8 @@ def test_generate_diff():
 
 
 def test_build_diff():
-    old_dict = parse_file(locate('file_before.json'))
-    new_dict = parse_file(locate('file_after.json'))
+    old_dict = parse_file(locate('file_1.json'))
+    new_dict = parse_file(locate('file_2.json'))
     with open(locate('build_diff.txt')) as f:
         expected = f.read().strip()
     assert json.dumps(build_diff(old_dict, new_dict)) == expected
