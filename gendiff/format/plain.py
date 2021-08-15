@@ -8,13 +8,6 @@ from gendiff.library import (
 
 
 def to_plain(difference, key_path=None):
-    '''Render difference to plain
-    Args:
-        difference (dict): difference input
-        path_of_keys (list): path to value
-    Returns:
-        String result
-    '''
     diff = []
 
     if not key_path:
