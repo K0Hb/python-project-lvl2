@@ -7,7 +7,7 @@ def locate(file):
 
 
 def test_file_parser():
-    output = parse_file(locate('file1.yml')), parse_file(locate('file2.yaml'))
+    output = parse_file(locate('file_one.yml')), parse_file(locate('file_two.yaml'))
     with open(locate('file_parser_output.txt')) as f:
         expected = f.read().strip()
         assert f'{output}' == expected
