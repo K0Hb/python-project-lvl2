@@ -15,7 +15,7 @@ flags = {
 }
 
 
-def to_stylish(difference, level=0):  # noqa: C901
+def to_stylish(difference, level=0):
     indent = level * DEFAULT_INDENT * ' '
     diff = []
     for key, value in sorted(difference.items()):
