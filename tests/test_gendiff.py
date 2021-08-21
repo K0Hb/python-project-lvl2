@@ -1,6 +1,6 @@
 import os
 import json
-from gendiff.gendiff_base import generate_diff , build_diff
+from gendiff.gendiff_base import generate_diff, build_diff
 from gendiff.parser import parse_file
 
 
