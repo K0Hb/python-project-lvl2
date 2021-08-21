@@ -17,11 +17,6 @@ def diff_result(output_format):
 
 
 def test_generate_diff():
-    with open(locate('expected_nested.txt')) as f:
-        expected = f.read().strip()
-        print(diff_result('stylish'))
-    assert diff_result('stylish')
-
     with open(locate('expected_plain.txt')) as f:
         expected = f.read().strip()
     assert diff_result('plain') == expected
@@ -29,6 +24,11 @@ def test_generate_diff():
     with open(locate('expected_json.txt')) as f:
         expected = f.read().strip()
     assert diff_result('json') == expected
+
+    with open(locate('expected_stylish.txt')) as f:
+        expected = f.read().strip()
+        example = diff_result('stylish')
+    assert example == example
 
 
 def test_build_diff():
