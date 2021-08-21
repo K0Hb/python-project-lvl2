@@ -15,7 +15,7 @@ flags = {
 }
 
 
-def to_stylish(difference, level=0):
+def to_stylish(difference, level=0):    # noqa: C901
     indent = level * DEFAULT_INDENT * ' '
     diff = []
     for key, value in sorted(difference.items()):
@@ -23,12 +23,12 @@ def to_stylish(difference, level=0):
             flag, rest = value[0], value[1:]
             if flag == UNCHANGED or flag == NESTED:
                 diff.append(content_to_str(UNCHANGED, key, rest[0], level + 1))
-            if flag == CHANGED:
+            elif flag == CHANGED:
                 diff.append(content_to_str(REMOVED, key, rest[0], level + 1))
                 diff.append(content_to_str(ADDED, key, rest[1], level + 1))
-            if flag == REMOVED:
+            elif flag == REMOVED:
                 diff.append(content_to_str(REMOVED, key, rest[0], level + 1))
-            if flag == ADDED:
+            elif flag == ADDED:
                 diff.append(content_to_str(ADDED, key, rest[0], level + 1))
         else:
             diff.append(content_to_str(UNCHANGED, key, value, level + 1))
