@@ -1,24 +1,20 @@
 {
     common: {
-      - follow: null
       + follow: false
         setting1: Value 1
       - setting2: 200
       - setting3: true
       + setting3: null
-      - setting4: null
       + setting4: blah blah
-      - setting5: null
       + setting5: {
             key5: value5
         }
         setting6: {
             doge: {
-              - wow: 
+              - wow:
               + wow: so much
             }
             key: value
-          - ops: null
           + ops: vops
         }
     }
@@ -37,7 +33,6 @@
             id: 45
         }
     }
-  - group3: null
   + group3: {
         deep: {
             id: {
@@ -47,3 +42,4 @@
         fee: 100500
     }
 }
+

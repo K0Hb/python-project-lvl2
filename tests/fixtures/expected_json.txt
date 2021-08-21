@@ -9,8 +9,7 @@
     }
   ],
   "group3": [
-    "changed",
-    null,
+    "added",
     {
       "deep": {
         "id": {
@@ -28,18 +27,15 @@
         200
       ],
       "follow": [
-        "changed",
-        null,
+        "added",
         false
       ],
       "setting4": [
-        "changed",
-        null,
+        "added",
         "blah blah"
       ],
       "setting5": [
-        "changed",
-        null,
+        "added",
         {
           "key5": "value5"
         }
@@ -57,8 +53,7 @@
         "nested",
         {
           "ops": [
-            "changed",
-            null,
+            "added",
             "vops"
           ],
           "doge": [

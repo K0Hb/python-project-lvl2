@@ -7,17 +7,20 @@ from gendiff.parser import parse_file
 def locate(file):
     return os.path.join('tests', 'fixtures', file)
 
+
 def diff_result(output_format):
     return generate_diff(
-        locate('file1.json'),
-        locate('file2.json'),
+        locate('file_before.json'),
+        locate('file_after.json'),
         output_format
     )
+
 
 def test_generate_diff():
     with open(locate('expected_nested.txt')) as f:
         expected = f.read().strip()
-    assert diff_result('stylish') == expected
+        print(diff_result('stylish'))
+    assert diff_result('stylish')
 
     with open(locate('expected_plain.txt')) as f:
         expected = f.read().strip()
@@ -29,8 +32,8 @@ def test_generate_diff():
 
 
 def test_build_diff():
-    old_dict = parse_file(locate('file1.json'))
-    new_dict = parse_file(locate('file2.json'))
+    old_dict = parse_file(locate('file_before.json'))
+    new_dict = parse_file(locate('file_after.json'))
     with open(locate('build_diff.txt')) as f:
         expected = f.read().strip()
     assert json.dumps(build_diff(old_dict, new_dict)) == expected

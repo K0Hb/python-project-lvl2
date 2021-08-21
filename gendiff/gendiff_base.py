@@ -19,7 +19,7 @@ def build_diff(old, new):
             for key in sorted(added_keys)
         }
     )
-    for key in sorted(old.keys() and sorted(new.keys())):
+    for key in sorted(old.keys() & new.keys()):
         old_value = old.get(key)
         new_value = new.get(key)
         has_children = (
