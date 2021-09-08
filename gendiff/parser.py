@@ -14,11 +14,11 @@ def cli_parser():
 
 
 def parse_file(file_path):
-    formats = {
+    format = {
         '.json': json.loads,
         '.yaml': yaml.safe_load,
         '.yml': yaml.safe_load
     }
     file_format = os.path.splitext(file_path)[1]
     with open(os.path.abspath(file_path)) as f:
-        return formats[file_format](f.read())
+        return format[file_format](f.read())

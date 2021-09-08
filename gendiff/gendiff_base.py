@@ -4,16 +4,16 @@ from gendiff.library import ADDED, CHANGED, REMOVED, NESTED, UNCHANGED
 
 
 def build_diff(old, new):
-    difference = {}
+    diff = {}
     removed_keys = old.keys() - new.keys()
-    difference.update(
+    diff.update(
         {
             key: (REMOVED, old.get(key))
             for key in sorted(removed_keys)
         }
     )
     added_keys = new.keys() - old.keys()
-    difference.update(
+    diff.update(
         {
             key: (ADDED, new.get(key))
             for key in sorted(added_keys)
@@ -28,12 +28,12 @@ def build_diff(old, new):
             isinstance(new_value, dict)
         )
         if has_children:
-            difference[key] = (NESTED, build_diff(old_value, new_value))
+            diff[key] = (NESTED, build_diff(old_value, new_value))
         elif old_value == new_value:
-            difference[key] = (UNCHANGED, new_value)
+            diff[key] = (UNCHANGED, new_value)
         else:
-            difference[key] = (CHANGED, old_value, new_value)
-    return difference
+            diff[key] = (CHANGED, old_value, new_value)
+    return diff
 
 
 def formatter(string_format):
