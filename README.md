@@ -12,9 +12,9 @@ ______
 `pip install git+https://github.com/K0Hb/python-project-lvl2.git`
 ______
 ### Использование:
-Вызов 
+#Вызов:
 `gendiff --format path/to/file1 path/to/file2`
-Можно вызвать справку используя флаг 
+#Можно вызвать справку используя флаг:
 `gendiff -h`
-Формат вывода  по умолчанию 'stylish' , так же возможно выбрать формат вывода 'plain' и 'json' с помощью флага :
+#Формат вывода  по умолчанию 'stylish' , так же возможно выбрать формат вывода 'plain' и 'json' с помощью флага:
 `gendiff --format plain`
