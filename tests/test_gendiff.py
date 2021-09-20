@@ -7,9 +7,9 @@ from gendiff.parser import parse_file
 
 def locate(file, status):
     status_dict = {
-        'before' : 'files_before',
-        'after' : 'files_after',
-        'result' : 'files_result'
+        'before': 'files_before',
+        'after': 'files_after',
+        'result': 'files_result'
     }
     return os.path.join('tests', 'fixtures', status_dict[status], file)
 
@@ -25,7 +25,7 @@ def diff_result(output_format):
 @pytest.mark.parametrize('path_fixture, status, format', [
     ('expected_stylish.txt', 'result', 'stylish'),
     ('expected_plain.txt', 'result', 'plain'),
-    ('expected_json.txt', 'result','json'),
+    ('expected_json.txt', 'result', 'json'),
 ])
 def test_generate_diff(path_fixture, status, format):
     with open(locate(path_fixture, status)) as f:
