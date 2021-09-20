@@ -1,5 +1,6 @@
 import os
 import json
+import pytest
 from gendiff.gendiff_base import generate_diff, build_diff
 from gendiff.parser import parse_file
 
@@ -16,18 +17,15 @@ def diff_result(output_format):
     )
 
 
-def test_generate_diff():
-    with open(locate('expected_stylish.txt')) as f:
+@pytest.mark.parametrize('path_fixture, format', [
+    ('expected_stylish.txt', 'stylish'),
+    ('expected_plain.txt', 'plain'),
+    ('expected_json.txt', 'json'),
+])
+def test_generate_diff(path_fixture, format):
+    with open(locate(path_fixture)) as f:
         expected = f.read().strip()
-    assert diff_result('stylish') == expected
-
-    with open(locate('expected_plain.txt')) as f:
-        expected = f.read().strip()
-    assert diff_result('plain') == expected
-
-    with open(locate('expected_json.txt')) as f:
-        expected = f.read().strip()
-    assert diff_result('json') == expected
+    assert diff_result(format) == expected
 
 
 def test_build_diff():
