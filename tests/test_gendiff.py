@@ -2,7 +2,7 @@ import os
 import json
 import pytest
 from gendiff.gendiff_base import generate_diff, build_diff
-from gendiff.parser import parse_file
+from gendiff.parser_files import parse_file
 
 
 def locate(file, status):

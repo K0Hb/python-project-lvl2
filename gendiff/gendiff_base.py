@@ -1,4 +1,4 @@
-from gendiff.parser import parse_file
+from gendiff.parser_files import parse_file
 from gendiff import format
 from gendiff.library import ADDED, CHANGED, REMOVED, NESTED, UNCHANGED
 
