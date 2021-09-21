@@ -73,7 +73,7 @@ def string_diff(key, flag, rest, diff, key_path):
 
 
 def render_value(value):
-    if isinstance(value, dict):
+    if isinstance(value, dict) or isinstance(value, list):
         return '[complex value]'
     elif isinstance(value, bool):
         return str(value).lower()
@@ -81,5 +81,7 @@ def render_value(value):
         return 'null'
     elif isinstance(value, int):
         return value
-    else:
+    elif isinstance(value, str):
         return f'\'{value}\''
+    else:
+        return value
