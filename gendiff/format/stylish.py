@@ -19,7 +19,7 @@ def to_stylish(difference, level=0):  # noqa: C901
     diff = []
     for key, value in sorted(difference.items()):
         if isinstance(value, tuple):
-            flag, *rest = value  #value[0], value[1:]
+            flag, *rest = value
             if flag == UNCHANGED or flag == NESTED:
                 diff.append(content_to_str(UNCHANGED, key, rest[0], level + 1))
             if flag == CHANGED:
