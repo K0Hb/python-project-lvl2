@@ -1,5 +1,5 @@
 from gendiff.parser_files import parse_file
-from gendiff import format
+from gendiff.format.get_format import formatter
 from gendiff.format.stylish import (
     ADDED,
     CHANGED,
@@ -33,15 +33,6 @@ def build_diff(old, new):
         else:
             diff[key] = (CHANGED, old_value, new_value)
     return diff
-
-
-def formatter(string_format):
-    formats = {
-        'stylish': format.stylish,
-        'plain': format.plain,
-        'json': format.json
-    }
-    return formats[string_format]
 
 
 def generate_diff(old, new, output_format='stylish'):
