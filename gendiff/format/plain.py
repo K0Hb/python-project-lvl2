@@ -1,9 +1,9 @@
-from gendiff.library import (
+from gendiff.format.stylish import (
     ADDED,
     CHANGED,
     REMOVED,
     NESTED,
-    UNCHANGED
+    UNCHANGED,
 )
 
 

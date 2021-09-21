@@ -1,12 +1,11 @@
-from gendiff.library import (
-    ADDED,
-    CHANGED,
-    REMOVED,
-    NESTED,
-    UNCHANGED,
-    DEFAULT_INDENT,
-    FLAG_INDENT
-)
+ADDED = 'added'
+CHANGED = 'changed'
+REMOVED = 'removed'
+NESTED = 'nested'
+UNCHANGED = 'unchanged'
+DEFAULT_INDENT = 4
+FLAG_INDENT = 2
+
 
 flags = {
     ADDED: '+',

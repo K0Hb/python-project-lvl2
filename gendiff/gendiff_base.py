@@ -1,6 +1,12 @@
 from gendiff.parser_files import parse_file
 from gendiff import format
-from gendiff.library import ADDED, CHANGED, REMOVED, NESTED, UNCHANGED
+from gendiff.format.stylish import (
+    ADDED,
+    CHANGED,
+    REMOVED,
+    NESTED,
+    UNCHANGED,
+)
 
 
 def build_diff(old, new):
