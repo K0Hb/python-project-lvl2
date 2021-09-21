@@ -11,20 +11,13 @@ from gendiff.format.stylish import (
 
 def build_diff(old, new):
     diff = {}
+
     removed_keys = old.keys() - new.keys()
-    diff.update(
-        {
-            key: (REMOVED, old.get(key))
-            for key in sorted(removed_keys)
-        }
-    )
+    for key in sorted(removed_keys):
+        diff[key] = (REMOVED, old.get(key))
     added_keys = new.keys() - old.keys()
-    diff.update(
-        {
-            key: (ADDED, new.get(key))
-            for key in sorted(added_keys)
-        }
-    )
+    for key in sorted(added_keys):
+        diff[key] = (ADDED, new.get(key))
     for key in sorted(old.keys() & new.keys()):
         old_value = old.get(key)
         new_value = new.get(key)
