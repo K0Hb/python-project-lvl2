@@ -23,3 +23,7 @@ ______
 #### Формат вывода  по умолчанию 'stylish' , так же возможно выбрать формат вывода 'plain' и 'json' с помощью флага:
 
 `gendiff --format plain`
+
+#### Демонстрация программы:
+
+[![asciicast](https://asciinema.org/a/437323.svg)](https://asciinema.org/a/437323)
