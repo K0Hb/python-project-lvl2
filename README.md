@@ -24,6 +24,8 @@ ______
 
 `gendiff --format plain`
 
+__________
+
 #### Демонстрация программы:
 
 [![asciicast](https://asciinema.org/a/437323.svg)](https://asciinema.org/a/437323)
