@@ -26,7 +26,7 @@ def build_diff(old, new):
         ) and (
             isinstance(new_value, dict)
         )
-        if has_children:
+        if has_children and old_value != new_value:
             diff[key] = (NESTED, build_diff(old_value, new_value))
         elif old_value == new_value:
             diff[key] = (UNCHANGED, new_value)
