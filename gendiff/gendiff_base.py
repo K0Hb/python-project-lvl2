@@ -35,6 +35,6 @@ def build_diff(old, new):
     return diff
 
 
-def generate_diff(old, new, output_format='author_format'):
+def generate_diff(old, new, output_format='stylish'):
     diff = build_diff(parse_file(old), parse_file(new))
     return formatter(output_format)(diff)
