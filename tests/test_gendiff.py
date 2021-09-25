@@ -23,7 +23,7 @@ def diff_result(output_format):
 
 
 @pytest.mark.parametrize('path_fixture, status, format', [
-    ('expected_stylish.txt', 'result', 'stylish'),
+    ('expected_stylish.txt', 'result', 'author_format'),
     ('expected_plain.txt', 'result', 'plain'),
     ('expected_json.txt', 'result', 'json'),
 ])
