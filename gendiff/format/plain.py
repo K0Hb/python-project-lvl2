@@ -9,12 +9,6 @@ from gendiff.format.stylish import (
 
 def to_plain(difference, key_path=None):
     diff = []
-    flags = {
-        ADDED: add_added_node,
-        REMOVED: add_removed_node,
-        CHANGED: add_changed_node,
-        NESTED: add_nested_node,
-    }
 
     if not key_path:
         key_path = []
@@ -23,7 +17,14 @@ def to_plain(difference, key_path=None):
         flag, rest = value[0], value[1:]
         if flag == UNCHANGED:
             continue
-        flags[flag](key, diff, key_path, rest)
+        elif flag == ADDED:
+            add_added_node(key, diff, key_path, rest)
+        elif flag == REMOVED:
+            add_removed_node(key, diff, key_path, rest=None)
+        elif flag == NESTED:
+            add_nested_node(key, diff, key_path, rest)
+        else:
+            add_changed_node(key, diff, key_path, rest)
     return '\n'.join(diff)
 
 

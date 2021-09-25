@@ -1,10 +1,12 @@
-ADDED = 'added'
-CHANGED = 'changed'
-REMOVED = 'removed'
-NESTED = 'nested'
-UNCHANGED = 'unchanged'
-DEFAULT_INDENT = 4
-FLAG_INDENT = 2
+from gendiff.status_constants import (
+    ADDED,
+    CHANGED,
+    REMOVED,
+    NESTED,
+    UNCHANGED,
+    DEFAULT_INDENT,
+    FLAG_INDENT
+)
 
 
 flags = {

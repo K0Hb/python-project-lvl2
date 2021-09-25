@@ -1,6 +1,6 @@
 from gendiff.parser_files import parse_file
 from gendiff.format.get_format import formatter
-from gendiff.format.stylish import (
+from gendiff.status_constants import (
     ADDED,
     CHANGED,
     REMOVED,
