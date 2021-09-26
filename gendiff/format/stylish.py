@@ -3,17 +3,12 @@ from gendiff.status_constants import (
     CHANGED,
     REMOVED,
     NESTED,
-    UNCHANGED,
-    DEFAULT_INDENT,
-    FLAG_INDENT
+    UNCHANGED
 )
 
 
-flags = {
-    ADDED: '+',
-    REMOVED: '-',
-    UNCHANGED: ' '
-}
+DEFAULT_INDENT = 4
+FLAG_INDENT = 2
 
 
 def to_stylish(difference, level=0):  # noqa: C901
@@ -37,6 +32,11 @@ def to_stylish(difference, level=0):  # noqa: C901
 
 
 def content_to_str(flag, key, value, level):
+    flags = {
+        ADDED: '+',
+        REMOVED: '-',
+        UNCHANGED: ' '
+    }
     indent = (level * DEFAULT_INDENT - FLAG_INDENT) * ' '
     if isinstance(value, dict):
         result = to_stylish(value, level)

@@ -1,13 +1,12 @@
-from gendiff.format.stylish import (
+from gendiff.status_constants import (
     ADDED,
-    CHANGED,
     REMOVED,
     NESTED,
     UNCHANGED,
 )
 
 
-def to_plain(difference, key_path=None):
+def to_plain(difference, key_path=None):  # noqa: C901
     diff = []
 
     if not key_path:
