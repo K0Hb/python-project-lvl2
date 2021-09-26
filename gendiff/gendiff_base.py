@@ -1,5 +1,5 @@
-from gendiff.parser_files import parse_file
-from gendiff.format.get_format import formatter
+from gendiff.parser_files import get_parser_file
+from gendiff.format.get_format import get_formatter
 from gendiff.status_constants import (
     ADDED,
     CHANGED,
@@ -35,6 +35,6 @@ def build_diff(old, new):
     return diff
 
 
-def generate_diff(old, new, output_format='stylish'):
-    diff = build_diff(parse_file(old), parse_file(new))
-    return formatter(output_format)(diff)
+def generate_diff(path_file1, path_file2, output_format='stylish'):
+    diff = build_diff(get_parser_file(path_file1), get_parser_file(path_file2))
+    return get_formatter(output_format)(diff)

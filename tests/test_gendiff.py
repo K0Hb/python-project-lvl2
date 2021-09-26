@@ -2,7 +2,7 @@ import os
 import json
 import pytest
 from gendiff.gendiff_base import generate_diff, build_diff
-from gendiff.parser_files import parse_file
+from gendiff.parser_files import get_parser_file
 
 
 def locate(file, status):
@@ -34,8 +34,8 @@ def test_generate_diff(path_fixture, status, format):
 
 
 def test_build_diff():
-    old_dict = parse_file(locate('file_before.json', 'before'))
-    new_dict = parse_file(locate('file_after.json', 'after'))
+    old_dict = get_parser_file(locate('file_before.json', 'before'))
+    new_dict = get_parser_file(locate('file_after.json', 'after'))
     with open(locate('build_diff.txt', 'result')) as f:
         expected = f.read().strip()
     assert json.dumps(build_diff(old_dict, new_dict)) == expected

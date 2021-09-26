@@ -18,20 +18,20 @@ def to_stylish(difference, level=0):  # noqa: C901
         if isinstance(value, tuple):
             flag, *rest = value
             if flag == UNCHANGED or flag == NESTED:
-                diff.append(content_to_str(UNCHANGED, key, rest[0], level + 1))
+                diff.append(forming_string(UNCHANGED, key, rest[0], level + 1))
             if flag == CHANGED:
-                diff.append(content_to_str(REMOVED, key, rest[0], level + 1))
-                diff.append(content_to_str(ADDED, key, rest[1], level + 1))
+                diff.append(forming_string(REMOVED, key, rest[0], level + 1))
+                diff.append(forming_string(ADDED, key, rest[1], level + 1))
             if flag == REMOVED:
-                diff.append(content_to_str(REMOVED, key, rest[0], level + 1))
+                diff.append(forming_string(REMOVED, key, rest[0], level + 1))
             if flag == ADDED:
-                diff.append(content_to_str(ADDED, key, rest[0], level + 1))
+                diff.append(forming_string(ADDED, key, rest[0], level + 1))
         else:
-            diff.append(content_to_str(UNCHANGED, key, value, level + 1))
+            diff.append(forming_string(UNCHANGED, key, value, level + 1))
     return '{\n' + '\n'.join(diff) + '\n' + indent + '}'
 
 
-def content_to_str(flag, key, value, level):
+def forming_string(flag, key, value, level):
     flags = {
         ADDED: '+',
         REMOVED: '-',
