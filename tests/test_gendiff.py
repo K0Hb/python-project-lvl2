@@ -3,7 +3,6 @@ import pytest
 from gendiff.gendiff_base import generate_diff
 
 
-
 def locate(file, status):
     status_dict = {
         'before': 'files_before',
