@@ -15,7 +15,7 @@ def to_stylish(difference, level=0):  # noqa: C901
     indent = level * DEFAULT_INDENT * ' '
     diff = []
     for key, value in sorted(difference.items()):
-        if isinstance(value, tuple):
+        if isinstance(value, list):
             flag, *rest = value
             if flag == UNCHANGED or flag == NESTED:
                 diff.append(forming_string(UNCHANGED, key, rest[0], level + 1))

@@ -1,34 +1,23 @@
 {
-  "group2": [
-    "removed",
-    {
-      "abc": 12345,
-      "deep": {
-        "id": 45
-      }
-    }
-  ],
-  "group3": [
-    "added",
-    {
-      "deep": {
-        "id": {
-          "number": 45
-        }
-      },
-      "fee": 100500
-    }
-  ],
   "common": [
     "nested",
     {
+      "follow": [
+        "added",
+        false
+      ],
+      "setting1": [
+        "unchanged",
+        "Value 1"
+      ],
       "setting2": [
         "removed",
         200
       ],
-      "follow": [
-        "added",
-        false
+      "setting3": [
+        "changed",
+        true,
+        null
       ],
       "setting4": [
         "added",
@@ -40,22 +29,9 @@
           "key5": "value5"
         }
       ],
-      "setting1": [
-        "unchanged",
-        "Value 1"
-      ],
-      "setting3": [
-        "changed",
-        true,
-        null
-      ],
       "setting6": [
         "nested",
         {
-          "ops": [
-            "added",
-            "vops"
-          ],
           "doge": [
             "nested",
             {
@@ -69,6 +45,10 @@
           "key": [
             "unchanged",
             "value"
+          ],
+          "ops": [
+            "added",
+            "vops"
           ]
         }
       ]
@@ -93,6 +73,26 @@
         },
         "str"
       ]
+    }
+  ],
+  "group2": [
+    "removed",
+    {
+      "abc": 12345,
+      "deep": {
+        "id": 45
+      }
+    }
+  ],
+  "group3": [
+    "added",
+    {
+      "deep": {
+        "id": {
+          "number": 45
+        }
+      },
+      "fee": 100500
     }
   ]
 }
